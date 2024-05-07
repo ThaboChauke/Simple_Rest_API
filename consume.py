@@ -1,6 +1,9 @@
+import os
+import random
 import requests
-from dotenv import loadenv
 
 
-response = requests.get('host')
+random_number = random.randint(1,10)
+link = f'http://127.0.0.1:8000/quotes/{random_number}'
+response = requests.get(link)
 print(response.json())
